@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Potrawy.Klasy
 {
+
     class Rosol : Danie
     {
         float masaMiesa;    
