@@ -12,9 +12,12 @@ namespace GraMemory
 {
     public partial class MemoryForm : Form
     {
+        private GameSettings _settings;
+
         public MemoryForm()
         {
             InitializeComponent();
+            _settings = new GameSettings();
         }
     }
 }
