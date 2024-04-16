@@ -94,7 +94,7 @@
             // 
             this.panelKart.Location = new System.Drawing.Point(16, 49);
             this.panelKart.Name = "panelKart";
-            this.panelKart.Size = new System.Drawing.Size(614, 100);
+            this.panelKart.Size = new System.Drawing.Size(591, 100);
             this.panelKart.TabIndex = 5;
             // 
             // timerZakrywacz
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 177);
+            this.ClientSize = new System.Drawing.Size(630, 177);
             this.Controls.Add(this.panelKart);
             this.Controls.Add(this.lblStartInfo);
             this.Controls.Add(this.lblPunktyWartosc);
