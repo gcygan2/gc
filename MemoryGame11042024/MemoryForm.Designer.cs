@@ -44,7 +44,6 @@
             // timerZakrywacz
             // 
             this.timerZakrywacz.Interval = 1000;
-            this.timerZakrywacz.Tick += new System.EventHandler(this.timerZakrywacz_Tick);
             // 
             // lblCzas
             // 
@@ -93,7 +92,6 @@
             // timerCzasGry
             // 
             this.timerCzasGry.Interval = 1000;
-            this.timerCzasGry.Tick += new System.EventHandler(this.timerCzasGry_Tick);
             // 
             // panelKart
             // 
@@ -117,7 +115,6 @@
             // timerCzasPodgladu
             // 
             this.timerCzasPodgladu.Interval = 1000;
-            this.timerCzasPodgladu.Tick += new System.EventHandler(this.timerCzasPodgladu_Tick);
             // 
             // label1
             // 
