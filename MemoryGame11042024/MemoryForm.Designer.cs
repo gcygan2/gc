@@ -115,6 +115,7 @@
             // timerCzasPodgladu
             // 
             this.timerCzasPodgladu.Interval = 1000;
+            this.timerCzasPodgladu.Tick += new System.EventHandler(this.TimerCzasPodgladu_Tick);
             // 
             // label1
             // 

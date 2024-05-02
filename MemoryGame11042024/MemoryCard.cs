@@ -27,5 +27,21 @@ namespace MemoryGame
          BackgroundImage = Obrazek;
          Enabled = false;
       }
-   }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // MemoryCard
+            // 
+            this.Click += new System.EventHandler(this.MemoryCard_Click);
+            this.ResumeLayout(false);
+
+        }
+
+        private void MemoryCard_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

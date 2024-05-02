@@ -26,8 +26,6 @@ namespace MemoryGame
 
             // wywołujemy metodę, która utworzy karty do odkrywania
             GenerujKarty();
-
-            // startujemy pierwszy timer, którego zadaniem jest odliczanie do rozpoczęcia gry
             timerCzasPodgladu.Start();
         }
 
@@ -100,13 +98,34 @@ namespace MemoryGame
                         (y * _settings.Bok) + (_settings.Margines * y));
                     b.Width = _settings.Bok;
                     b.Height = _settings.Bok;
-                    //b.Click += BtnClicked;
+                    b.Click += MemoryCard_Click;
                     b.Odkryj();
                     panelKart.Controls.Add(b);
                     buttons.Remove(b);
                 }
             }
 
+        }
+
+        private void TimerCzasPodgladu_Tick(object sender, EventArgs e)
+        {
+            _settings.CzasPodgladu--;
+            lblStartInfo.Text = $"Początek gry za {_settings.CzasPodgladu}";
+            if (_settings.CzasPodgladu <= 0)
+            {
+                foreach (Control kontrolka in panelKart.Controls)
+                {
+                    MemoryCard c = (MemoryCard)kontrolka;
+                    c.Zakryj();
+                }
+                timerCzasPodgladu.Stop();
+                timerCzasGry.Start();
+            }
+        }
+        private void MemoryCard_Click(object sender, EventArgs e)
+        {
+            MemoryCard btn = (MemoryCard)sender;
+            btn.Odkryj();
         }
     }
 }
